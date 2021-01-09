@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp" >
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginRight="16dp"
+            android:src="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/creator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_image"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Nama Pembuat:"/>
+
+        <TextView
+            android:id="@+id/item_creator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_image"
+            android:layout_below="@id/creator"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16dp"
+            tools:text="Nama Pembuat" />
+
+        <TextView
+            android:id="@+id/release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_image"
+            android:layout_below="@id/item_creator"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:text="Tahun Rilis :"/>
+
+        <TextView
+            android:id="@+id/item_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/item_image"
+            android:layout_below="@id/release"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16dp"
+            tools:text="Tahun Rillis" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/item_release"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:text="@string/deskripsi" />
+
+        <TextView
+            android:id="@+id/item_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/desc"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et ligula id elit gravida aliquam. Praesent luctus purus id elit mattis, lacinia tempus odio venenatis. Suspendisse tempus lectus eu risus placerat hendrerit. Mauris consectetur pellentesque nisi, non vestibulum turpis lobortis sed. Aenean vitae vulputate ipsum, quis finibus enim. Phasellus maximus sapien id mi scelerisque, id dignissim tortor laoreet. Nulla nec tempor nisl, a tristique libero. Sed eget odio rhoncus, condimentum sem eu, viverra lorem. Maecenas id justo sit amet purus fermentum volutpat. Nunc fringilla nulla egestas velit lacinia, vitae tincidunt nibh egestas. Morbi ac lectus neque. Ut vehicula, magna pellentesque varius dictum, nunc est sagittis purus, vel feugiat nisi elit dignissim magna. Praesent ut luctus urna. Aliquam et ligula odio. Nullam hendrerit convallis porta.Donec feugiat vehicula nulla nec euismod. In quis odio mi. Ut elementum ligula ut ligula rutrum, sed viverra tortor congue. Praesent sit amet placerat dolor. Sed sodales, metus id pretium pretium, velit urna sodales neque, vitae rutrum risus ligula ac lectus. Sed lobortis, magna vitae auctor aliquam, nulla augue ullamcorper erat, nec fermentum mauris magna a nulla. In at accumsan arcu, non convallis sem.Suspendisse potenti. Fusce lacinia sed felis ac tincidunt. Nulla dictum lobortis magna sit amet auctor. Fusce rutrum elit vitae vestibulum suscipit. Morbi convallis a est vel scelerisque. Vestibulum auctor ipsum non auctor viverra. Sed tempus velit in metus interdum feugiat eu eu nunc. Aliquam feugiat venenatis mi, sit amet cursus nunc. Nam metus enim, iaculis eu lacus sit amet, finibus feugiat ante. Proin viverra nisi non diam molestie vehicula. Nunc a mi purus. In neque justo, aliquam vel mi non, ullamcorper suscipit tortor. Cras vitae elementum justo, vitae finibus dolor.Vivamus convallis porta ultricies. Sed at erat aliquet, gravida nisl vitae, aliquet nisl. Nullam vitae iaculis enim, vel finibus velit. Nulla rutrum dignissim ante vel feugiat. Praesent porta magna a leo tincidunt placerat. Donec non gravida felis, ac luctus nisi. Fusce ac porta ligula. Vestibulum et sagittis ante, eget rhoncus turpis. Nulla vitae tellus varius, venenatis odio sit amet, semper magna. Vestibulum faucibus et quam ultricies cursus.Nulla consequat egestas velit, ultrices ultricies turpis. Proin luctus nulla quis nulla blandit eleifend. Nulla ullamcorper venenatis cursus. Nam in porttitor velit. Nulla in quam et erat aliquet commodo ut consectetur velit. Aenean id ipsum ut neque posuere consequat. Suspendisse consequat fermentum tristique. Phasellus eget sem aliquet, condimentum ex quis, vestibulum justo. Maecenas odio nunc, efficitur malesuada facilisis eu, lacinia id neque. Vivamus molestie eleifend lectus id luctus. Aenean sagittis, ligula in elementum iaculis, turpis enim imperdiet ipsum, ullamcorper scelerisque leo nulla id metus. In leo ex, dignissim vel elit aliquet, sodales accumsan felis. Sed at ipsum in nisl maximus hendrerit non eget neque. " />
+
+    </RelativeLayout>
+
+</ScrollView>
