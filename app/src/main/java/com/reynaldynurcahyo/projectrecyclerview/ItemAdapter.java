@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2021. Reynaldy Nurcahyo
+ */
+
 package com.reynaldynurcahyo.projectrecyclerview;
 
 import android.content.Intent;
@@ -16,10 +20,10 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ListViewHolder> {
-    private ArrayList<Item> listItem;
+    private final ArrayList<Item> listItem;
 
-    public ItemAdapter(ArrayList<Item> list) {
-        this.listItem = list;
+    public ItemAdapter(ArrayList<Item> listItem) {
+        this.listItem = listItem;
     }
 
     @NonNull
@@ -39,16 +43,17 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ListViewHolder
         holder.tvName.setText(item.getName());
         holder.tvDesc.setText(item.getDesc());
 
-        holder.linearLayout.setOnClickListener(v -> {
-            Intent detail = new Intent(holder.itemView.getContext(), DetailActivity.class);
-
-            detail.putExtra("item_image", item.getImage());
-            detail.putExtra("item_name", item.getName());
-            detail.putExtra("item_desc", item.getDesc());
-            detail.putExtra("item_creator", item.getCreator());
-            detail.putExtra("item_release", item.getRelease());
-
-            holder.itemView.getContext().startActivity(detail);
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detail = new Intent(holder.itemView.getContext(), DetailActivity.class);
+                detail.putExtra("item_image", item.getImage());
+                detail.putExtra("item_name", item.getName());
+                detail.putExtra("item_desc", item.getDesc());
+                detail.putExtra("item_release", item.getRelease());
+                detail.putExtra("item_creator", item.getCreator());
+                holder.itemView.getContext().startActivity(detail);
+            }
         });
     }
 

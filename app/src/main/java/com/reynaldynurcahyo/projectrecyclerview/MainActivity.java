@@ -1,17 +1,20 @@
+/*
+ * Copyright (c) 2021. Reynaldy Nurcahyo
+ */
+
 package com.reynaldynurcahyo.projectrecyclerview;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.icu.text.CaseMap;
-import android.os.Bundle;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rv;
-    private ArrayList<Item> list = new ArrayList<>();
+    private final ArrayList<Item> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
